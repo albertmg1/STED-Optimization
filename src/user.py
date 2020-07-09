@@ -76,7 +76,7 @@ class LinePicker:
                 else:
                     self.end = point
                     cc, rr = skimage.draw.line(*self.start, *self.end)
-                    self.positions = numpy.sqrt((rr - self.start[0])**2 + (cc - self.start[1])**2)
+                    self.positions = numpy.sqrt((cc - self.start[0])**2 + (rr - self.start[1])**2)
                     data = []
                     for delta in self.deltas:
                         data.append(self.img[rr+delta, cc])
